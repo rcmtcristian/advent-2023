@@ -1,17 +1,17 @@
 const fs = require("fs");
 
-// function partOne(file) {
-//   const linesSplit = fs.readFileSync(file, "utf-8").trim().split("\n");
+function partOne(file) {
+  const linesSplit = fs.readFileSync(file, "utf-8").trim().split("\n");
 
-//   const numbers = linesSplit.map((line) => line.replace(/\D+/g, ""));
+  const numbers = linesSplit.map((line) => line.replace(/\D+/g, ""));
 
-//   const conjoinedNumbers = numbers.map((number) =>
-//     Number(number[0] + number.slice(-1))
-//   );
+  const conjoinedNumbers = numbers.map((number) =>
+    Number(number[0] + number.slice(-1))
+  );
 
-//   const fullAddition = conjoinedNumbers.reduce((a, b) => a + b, 0);
-//   console.log(fullAddition);
-// }
+  const fullAddition = conjoinedNumbers.reduce((a, b) => a + b, 0);
+  console.log(fullAddition);
+}
 
 // partOne("./input.txt");
 function partTwo(file) {
